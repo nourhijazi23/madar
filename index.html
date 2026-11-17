@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madar Tech | لوحة الإدارة</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard-shell">
+        <aside class="sidebar">
+            <div class="sidebar-brand">
+                <img src="images/logo.png" alt="Madar Tech Logo" class="brand-image">
+                <div class="brand-copy">
+                    <strong>Madar Tech</strong>
+                    <span>أحمد العامودي</span>
+                </div>
+            </div>
+
+            <div class="sidebar-section-title">الرئيسية</div>
+            <nav class="sidebar-nav">
+                <button class="nav-item active" data-target="dashboard-panel"><i class="fas fa-chart-pie"></i><span>لوحة التحكم</span></button>
+                <button class="nav-item" data-target="bookings-panel"><i class="fas fa-calendar-check"></i><span>الحجوزات</span><em>12</em></button>
+                <button class="nav-item" data-target="customers-panel"><i class="fas fa-user"></i><span>العملاء</span></button>
+                <button class="nav-item" data-target="students-panel"><i class="fas fa-graduation-cap"></i><span>الطلاب</span></button>
+                <button class="nav-item" data-target="projects-panel"><i class="fas fa-folder-open"></i><span>المشاريع</span></button>
+                <button class="nav-item" data-target="messages-panel"><i class="fas fa-message"></i><span>الرسائل</span><em>7</em></button>
+                <button class="nav-item" data-target="reports-panel"><i class="fas fa-wallet"></i><span>التقارير</span></button>
+                <button class="nav-item" data-target="settings-panel"><i class="fas fa-gear"></i><span>الإعدادات</span></button>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a href="#" class="launch-link"><i class="fas fa-arrow-up-right-from-square"></i> فتح الموقع</a>
+            </div>
+        </aside>
+
+        <main class="main-panel">
+            <header class="topbar">
+                <div class="topbar-left">
+                    <div class="search-box">
+                        <i class="fas fa-magnifying-glass"></i>
+                        <input type="text" value="بحث..." aria-label="بحث">
+                    </div>
+                </div>
+
+                <div class="topbar-right">
+                    <button class="pill-btn muted action-btn" data-target="customers-panel">إضافة جديد</button>
+                    <button class="pill-btn primary action-btn" data-target="bookings-panel">حجز الآن</button>
+                </div>
+            </header>
+
+            <div class="dashboard-content">
+                <section id="dashboard-panel" class="view-panel active">
+                    <div class="stats-row">
+                        <div class="stat-card">
+                            <div class="stat-head"><span>حالة المشروع</span><i class="fas fa-code-branch"></i></div>
+                            <div class="stat-number">93</div>
+                            <div class="progress"><span style="width: 93%"></span></div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-head"><span>الطلبات</span><i class="fas fa-list-check"></i></div>
+                            <div class="stat-number">4</div>
+                            <div class="stat-note">منذ هذا الأسبوع</div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-head"><span>الحجوزات</span><i class="fas fa-calendar-week"></i></div>
+                            <div class="stat-number">5</div>
+                            <div class="stat-note">تحديثات اليوم</div>
+                        </div>
+
+                        <div class="stat-card">
+                            <div class="stat-head"><span>المتقدم</span><i class="fas fa-arrow-trend-up"></i></div>
+                            <div class="stat-number">9</div>
+                            <div class="stat-note">نسبة الإنجاز</div>
+                        </div>
+                    </div>
+
+                    <div class="wide-grid">
+                        <section class="panel large-panel">
+                            <div class="panel-header">
+                                <h3>GitHub &amp; Version Control</h3>
+                                <span>مستوى الأداء</span>
+                            </div>
+                            <div class="mini-metrics">
+                                <div>
+                                    <span>حالة المشروع</span>
+                                    <strong>92%</strong>
+                                </div>
+                                <div>
+                                    <span>التغييرات</span>
+                                    <strong>12</strong>
+                                </div>
+                                <div>
+                                    <span>النسخ</span>
+                                    <strong>08</strong>
+                                </div>
+                            </div>
+                        </section>
+
+                        <section class="panel right-panel">
+                            <div class="panel-header">
+                                <h3>لماذا نحن</h3>
+                            </div>
+                            <ul class="check-list">
+                                <li>مساحات عمل متكاملة</li>
+                                <li>دعم فني احترافي</li>
+                                <li>برامج تعليمية عملية</li>
+                                <li>تواصل مباشر عبر واتساب</li>
+                            </ul>
+                        </section>
+                    </div>
+
+                    <div class="lower-grid">
+                        <section class="panel table-panel">
+                            <div class="panel-header inline-header">
+                                <h3>قائمة الطلبات</h3>
+                                <button class="small-btn">عرض الكل</button>
+                            </div>
+
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <th>الاسم</th>
+                                        <th>الخدمة</th>
+                                        <th>التاريخ</th>
+                                        <th>الحالة</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>أحمد</td>
+                                        <td>مساحة عمل</td>
+                                        <td>2026/11/17</td>
+                                        <td><span class="status ok">نشط</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>سارة</td>
+                                        <td>دورة UX/UI</td>
+                                        <td>2026/11/17</td>
+                                        <td><span class="status wait">قيد المراجعة</span></td>
+                                    </tr>
+                                    <tr>
+                                        <td>محمود</td>
+                                        <td>دورة web</td>
+                                        <td>2026/11/17</td>
+                                        <td><span class="status ok">مكتمل</span></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </section>
+
+                        <section class="panel info-panel">
+                            <div class="panel-header">
+                                <h3>مؤشرات سريعة</h3>
+                            </div>
+                            <div class="quick-stats">
+                                <div>
+                                    <label>العملاء الجدد</label>
+                                    <strong>18</strong>
+                                </div>
+                                <div>
+                                    <label>المشاريع الفعالة</label>
+                                    <strong>27</strong>
+                                </div>
+                                <div>
+                                    <label>إجمالي الحضور</label>
+                                    <strong>140</strong>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </section>
+
+                <section id="bookings-panel" class="view-panel">
+                    <div class="section-header-card">
+                        <div>
+                            <span>الحجوزات</span>
+                            <h3>جميع الطلبات الواردة</h3>
+                        </div>
+                        <button class="pill-btn primary">إضافة حجز</button>
+                    </div>
+
+                    <div class="booking-grid">
+                        <div class="panel small-card">
+                            <h4>الحجوزات اليوم</h4>
+                            <strong>34</strong>
+                        </div>
+                        <div class="panel small-card">
+                            <h4>قيد التنفيذ</h4>
+                            <strong>12</strong>
+                        </div>
+                        <div class="panel small-card">
+                            <h4>مكتملة</h4>
+                            <strong>22</strong>
+                        </div>
+                    </div>
+
+                    <div class="panel">
+                        <div class="panel-header inline-header">
+                            <h3>جدول الحجوزات</h3>
+                            <button class="small-btn">تصدير</button>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>اسم العميل</th>
+                                    <th>الخدمة</th>
+                                    <th>المبلغ</th>
+                                    <th>الحالة</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr><td>أحمد</td><td>مساحة عمل</td><td>450 ريال</td><td><span class="status ok">مؤكد</span></td></tr>
+                                <tr><td>سارة</td><td>دورة UI/UX</td><td>300 ريال</td><td><span class="status wait">قيد المراجعة</span></td></tr>
+                                <tr><td>محمود</td><td>جلسات تدريبية</td><td>500 ريال</td><td><span class="status ok">مكتمل</span></td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </section>
+
+                <section id="customers-panel" class="view-panel">
+                    <div class="section-header-card">
+                        <div>
+                            <span>العملاء</span>
+                            <h3>إدارة العملاء</h3>
+                        </div>
+                        <button class="pill-btn muted">إضافة عميل</button>
+                    </div>
+
+                    <div class="customer-cards">
+                        <div class="panel customer-card">
+                            <div class="avatar green">A</div>
+                            <h4>أحمد علي</h4>
+                            <p>مساحة عمل</p>
+                        </div>
+                        <div class="panel customer-card">
+                            <div class="avatar blue">S</div>
+                            <h4>سارة محمد</h4>
+                            <p>UI/UX</p>
+                        </div>
+                        <div class="panel customer-card">
+                            <div class="avatar gold">M</div>
+                            <h4>محمود خالد</h4>
+                            <p>برمجة</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="students-panel" class="view-panel">
+                    <div class="section-header-card">
+                        <div>
+                            <span>الطلاب</span>
+                            <h3>قائمة الطلاب</h3>
+                        </div>
+                        <button class="pill-btn muted">إضافة طالب</button>
+                    </div>
+
+                    <div class="customer-cards">
+                        <div class="panel customer-card">
+                            <div class="avatar green">N</div>
+                            <h4>Nour Hajazi</h4>
+                            <p>Front-End</p>
+                        </div>
+                        <div class="panel customer-card">
+                            <div class="avatar blue">T</div>
+                            <h4>Tasneem Ishtawi</h4>
+                            <p>UI/UX</p>
+                        </div>
+                        <div class="panel customer-card">
+                            <div class="avatar gold">D</div>
+                            <h4>Dina Arafat</h4>
+                            <p>Graphic</p>
+                        </div>
+                        <div class="panel customer-card">
+                            <div class="avatar green">R</div>
+                            <h4>Rima Hamdan</h4>
+                            <p>Marketing</p>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="projects-panel" class="view-panel">
+                    <div class="section-header-card">
+                        <div>
+                            <span>المشاريع</span>
+                            <h3>مشاريع الفريق</h3>
+                        </div>
+                        <button class="pill-btn primary">مشروع جديد</button>
+                    </div>
+
+                    <div class="student-list">
+                        <div class="panel project-item">
+                            <div>
+                                <strong>موقع Madar Tech</strong>
+                                <p>تطوير واجهة لوحة الإدارة</p>
+                            </div>
+                            <span class="status ok">جاهز</span>
+                        </div>
+                        <div class="panel project-item">
+                            <div>
+                                <strong>منصة التدريب</strong>
+                                <p>إدارة الطلبات والدورات</p>
+                            </div>
+                            <span class="status wait">قيد التطوير</span>
+                        </div>
+                        <div class="panel project-item">
+                            <div>
+                                <strong>تطبيق خدمة العملاء</strong>
+                                <p>إدارة الرسائل والاستفسارات</p>
+                            </div>
+                            <span class="status ok">مكتمل</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="messages-panel" class="view-panel">
+                    <div class="section-header-card">
+                        <div>
+                            <span>الرسائل</span>
+                            <h3>الرسائل الأخيرة</h3>
+                        </div>
+                    </div>
+
+                    <div class="message-list">
+                        <div class="panel message-item">
+                            <div>
+                                <strong>أحمد علي</strong>
+                                <p>يرغب في حجز دورة UI/UX</p>
+                            </div>
+                            <span class="status ok">جديد</span>
+                        </div>
+                        <div class="panel message-item">
+                            <div>
+                                <strong>Nour Hajazi</strong>
+                                <p>طلب تحديث في الصفحة الرئيسية</p>
+                            </div>
+                            <span class="status wait">معلق</span>
+                        </div>
+                        <div class="panel message-item">
+                            <div>
+                                <strong>Rima Hamdan</strong>
+                                <p>استفسار حول خطة التدريب</p>
+                            </div>
+                            <span class="status ok">تم الرد</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="reports-panel" class="view-panel">
+                    <div class="section-header-card">
+                        <div>
+                            <span>التقارير</span>
+                            <h3>ملخص الأداء</h3>
+                        </div>
+                    </div>
+
+                    <div class="report-boxes">
+                        <div class="panel report-box">
+                            <label>معدل التحويل</label>
+                            <strong>68%</strong>
+                            <div class="mini-progress"><span style="width:68%"></span></div>
+                        </div>
+                        <div class="panel report-box">
+                            <label>إيرادات هذا الشهر</label>
+                            <strong>4,800 ريال</strong>
+                            <div class="mini-progress"><span style="width:82%"></span></div>
+                        </div>
+                        <div class="panel report-box">
+                            <label>نسبة رضا العملاء</label>
+                            <strong>94%</strong>
+                            <div class="mini-progress"><span style="width:94%"></span></div>
+                        </div>
+                    </div>
+                </section>
+
+                <section id="settings-panel" class="view-panel">
+                    <div class="section-header-card">
+                        <div>
+                            <span>الإعدادات</span>
+                            <h3>إعدادات الموقع</h3>
+                        </div>
+                        <button class="pill-btn primary">حفظ</button>
+                    </div>
+
+                    <div class="settings-grid">
+                        <div class="panel">
+                            <div class="form-field">
+                                <label>اسم الموقع</label>
+                                <input type="text" value="Madar Tech">
+                            </div>
+                            <div class="form-field">
+                                <label>البريد الإلكتروني</label>
+                                <input type="email" value="info@madartech.ps">
+                            </div>
+                            <div class="form-field">
+                                <label>رقم الواتساب</label>
+                                <input type="text" value="970590000000">
+                            </div>
+                        </div>
+
+                        <div class="panel">
+                            <div class="switch-row">
+                                <span>عرض الأقسام الرئيسية</span>
+                                <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                            </div>
+                            <div class="switch-row">
+                                <span>تفعيل الحجز السريع</span>
+                                <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                            </div>
+                            <div class="switch-row">
+                                <span>إشعارات رسائل واتساب</span>
+                                <label class="switch"><input type="checkbox" checked><span class="slider"></span></label>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <script>
+        const navItems = document.querySelectorAll('.nav-item');
+        const panels = document.querySelectorAll('.view-panel');
+        const actionButtons = document.querySelectorAll('.action-btn');
+
+        function activatePanel(targetId) {
+            navItems.forEach(el => {
+                const active = el.dataset.target === targetId;
+                el.classList.toggle('active', active);
+            });
+
+            panels.forEach(panel => {
+                panel.classList.toggle('active', panel.id === targetId);
+            });
+        }
+
+        navItems.forEach(item => {
+            item.addEventListener('click', () => {
+                activatePanel(item.dataset.target);
+            });
+        });
+
+        actionButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                const targetId = button.dataset.target;
+                if (targetId) activatePanel(targetId);
+            });
+        });
+    </script>
+</body>
+</html>
